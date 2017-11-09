@@ -37,6 +37,7 @@ body.modal-open {
     overflow: hidden;
 
 }
+.container{max-width: 960px;}
 .container, .clearfix {clear: both}
 a {
   color: #30baed;
@@ -135,7 +136,7 @@ a {
   padding: 3em 0 0;
   background: #fff;
 }
-.plan .body ul li {border-bottom: 1px solid #f2f0ed;padding: 1em;}
+.plan .body ul li {border-bottom: 1px solid #f2f0ed;padding: 1em 2em; text-align: center;}
 .plan .body ul li:last-child {border-width: 0px;}
 
 .plan footer {background: #fff;}

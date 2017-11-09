@@ -43,11 +43,12 @@ app.use(session({
    // cookie: { secure: true }
 }));
 
-app.all('*', function (req, res, next) {
-  console.log(req.session);
-  console.log(req.sessionID);
-  next(); // pass control to the next handler
-});
+// // CHECK SESSIONS
+// app.all('*', function (req, res, next) {
+//   console.log(req.session);
+//   console.log(req.sessionID);
+//   next(); // pass control to the next handler
+// });
 
 app.get('/', function(req, res) {
   res.render('starter');
