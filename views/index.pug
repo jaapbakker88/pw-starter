@@ -1,0 +1,57 @@
+extends layout
+block content
+  #logo
+    #logo-retina 
+      img(src="/assets/images/logo.png")
+  .container
+    .columns
+      .column.is-12.has-text-centered
+        h1.title.is-2.is-hero-text(style="margin: 2rem auto") Support PartyWith, Become a Party Patron Today!
+  .container 
+    .columns.is-centered
+      .column.is-8
+        .box.content
+          .videoWrapper
+            iframe(src='https://player.vimeo.com/video/241019442', width='640', height='480', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+          p If you’ve ever benefited from the PartyWith app or simply believe in the concept - we now need your support! 
+
+          p Help the app to continue to operate and grow - become a Party Patron today. Party Patrons are not only the most awesome people on the app, they also receive special perks.
+  .container
+    .columns.is-centered.options
+      .column.is-4
+        .option
+          header 💎 Party Patron 💎
+          .body.content
+            p As a Party Patron, for <strong>€25 a year</strong>, you’ll get the following awesome perks:
+            ul
+              li Globetrotter* features for a year <em>(€40 value)</em>
+              li A sweet Patron badge on your profile!
+            img(src="https://cdn.glitch.com/b2a03dab-a7cf-4d7e-b681-64f1ed6953ee%2FBLUE.png?1509618452997")
+          footer
+            form(action="/checkout" method="post")
+              input(type="hidden" name="item" value="party")
+              button Become a Party Patron
+            
+      .column.is-4
+        .option
+          header ✨ Super Patron ✨
+          .body.content
+            p As a Super Patron, for <strong>€50 a year</strong>, you get even more:
+            ul
+              li Globetrotter* features for a year <em>(€40 value)</em>
+              li 2 featured events per month <em>(€240 value **)</em>
+              li Gold Patron badge on your profile!
+            img(src="https://cdn.glitch.com/b2a03dab-a7cf-4d7e-b681-64f1ed6953ee%2FGOLD.png?1509618450596")
+          footer
+            form(action="/checkout" method="post")
+              input(type="hidden" name="item" value="super")
+              button Become a Super Patron
+  .container
+    .columns.is-centered
+      .column.is-6.has-text-centered.byline.content
+        p Plus with both Patron levels, you'll have a direct line of communication with the PartyWith team, and a real say in the direction of the app!
+
+        p * Globetrotter - Chat and join events from all over the world, not just in your own city
+        p ** The cost of featuring an event is normally €10 per event. Featured events are 2x more popular on the app.
+        
+  

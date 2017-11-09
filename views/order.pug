@@ -1,0 +1,28 @@
+extends layout
+
+block content
+
+  #logo
+    #logo-retina 
+      img(src="/assets/images/logo.png")
+  #container
+    #header
+      #header-info Your Order
+      #header-amount € #{order.amount}
+
+    #body(action="/patron" method="POST")
+      #form-fields
+        table.table.is-bordered.is-fullwidth
+          tr
+            td 
+              strong Status
+            td= order.status
+          tr
+            td 
+              strong Amount
+            td= order.amount
+    
+        p 
+      #submit-grid
+
+    

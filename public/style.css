@@ -1,0 +1,249 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700');
+
+* {
+  box-sizing: border-box;
+}
+html{
+  height: 100%;
+}
+body {
+  background: url('/assets/images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position:relative;
+  font-family: 'Montserrat', Helvetica, Verdana, Arial, sans-serif;
+}
+body:before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.4+43,1+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 43%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 43%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 43%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+body.modal-open {
+    overflow: hidden;
+
+}
+
+a {
+  color: #30baed;
+}
+
+.is-hero-text {
+  color: #fff;
+}
+#logo {
+  display: block;
+    height: 75px;
+    margin: 0 auto 30px;
+    position: relative;
+    width: 320px;
+}
+#logo #logo-retina {
+  background: transparent 50% no-repeat;
+    height: 150px;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    left: 50%;
+    margin: -75px 0 0 -320px;
+    position: absolute;
+    top: 50%;
+    transform: scale(.5);
+    -ms-transform: scale(.5);
+    -webkit-transform: scale(.5);
+    width: 640px;
+}
+#logo #logo-retina img {
+  display: block;
+  margin: 32px auto;
+  height: 100%; 
+}
+
+#container {
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 20px rgba(0,0,0,.1), 0 5px 10px rgba(0,0,0,.1);
+    box-shadow: 0 5px 20px rgba(0,0,0,.1), 0 5px 10px rgba(0,0,0,.1);
+    margin: 0 auto;
+    position: relative;
+    width: 380px;
+}
+#header {
+    border-top: 1px solid hsla(0,0%,62%,.25);
+    border-radius: 6px 6px 0 0;
+    color: #fff;
+    overflow: hidden;
+    padding: 23px 30px;
+    position: relative;
+    background: #000!important;
+    border-top: 0;
+}
+
+#header-info {
+  float: left;
+  line-height: 22px;
+  max-width: 65%;
+  position: relative;
+}
+
+#header-amount {
+    float: right;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 38px;
+    max-width: 34%;
+    text-align: right;
+    position: relative;
+    white-space: nowrap;
+}
+
+#body {
+  background: #fff;
+  border-radius: 0 0 6px 6px;
+  color: #2c3643;
+  position: relative;
+}
+#form-fields {
+  padding: 1em 5px;
+}
+
+
+#submit-grid {
+  border-top: 1px solid #f2f0ed;
+  padding: 5px;
+}
+#submit {
+  border-radius:0 ;
+  width: 100%;
+  height: 75px;
+  border: none;
+  font-size: 22px;
+  border-color: transparent;  
+  background: transparent;
+  border-radius: 0px 0px 4px 4px;
+  cursor: pointer;
+}
+#submit:hover {
+  background: rgba(0,149,255,.06);
+}
+
+.option {
+  background: rgba(255,255,255,0.8);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 20px rgba(0,0,0,.1), 0 5px 10px rgba(0,0,0,.1);
+  box-shadow: 0 5px 20px rgba(0,0,0,.1), 0 5px 10px rgba(0,0,0,.1);
+}
+.option header {
+  border-radius: 6px 6px 0 0;
+  padding: 1em 2em;
+  background: #000;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+}
+
+.option footer {
+  height: 75px;
+  border-top: 1px solid #f2f0ed;
+}
+
+.option footer .item12 {
+  width: 50%;
+  float: left;
+  padding: 5px;
+  height: 100%;
+}
+
+.option footer .item12:first-child {
+  border-right: 1px solid #f2f0ed;
+}
+.option footer .item12 form button {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.option footer .item12 form button:hover {
+  background: #30baed;
+  color: #fff;
+}
+  
+
+.option .body {
+  padding: 1em 2em 6em;
+}
+.option .body img {
+  display: block;
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+.options .column {display: flex;}
+
+.option {position: relative}
+.option footer {position: absolute; bottom: 0; width: 100%;}
+
+.byline{
+  color: #ffffff; 
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.screenshot {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+}
+
+.modal-button-box {
+  position: absolute;
+  min-width: 150px;
+  top: 5px;
+  right: 5px;
+}
+.modal-button {
+/*  background-color: #30baed;
+*/  width: 100%;
+}
+
+.as-seen-in img{
+  display: block;
+  margin: auto;
+  max-width: 100px;
+}
+ 
+@media screen and (max-width: 767px) {
+    .options {margin-top: 2em;}
+    .options .column {display: block; padding: 0 2em;}
+}

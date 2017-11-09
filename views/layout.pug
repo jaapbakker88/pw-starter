@@ -1,0 +1,28 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    
+    link(rel="shortcut icon" type="image/png" href="/images/logo.png")
+      
+    title Become a Champion of PartyWith
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css", rel="stylesheet")
+    link(rel='stylesheet', href='/style.css')
+  body
+
+    block content
+    
+    .modal
+      .modal-background
+      .modal-content
+        .box.content
+          include partials/modal-content
+      button.modal-close.is-large
+      
+    //- div.modal-button-box.has-text-centered
+    //-   a.modal-button.button.is-info(href="#") Why?
+    
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=', crossorigin='anonymous')
+    script(src='/client.js')
+
