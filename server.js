@@ -33,15 +33,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(session({
-   cookieName: 'sessionName',
+   // cookieName: 'sessionName',
    store: new MongoStore({ mongooseConnection: mongoose.connection }),
    secret: "notagoodsecretnoreallydontusethisone",
    resave: false,
    saveUninitialized: true,
    httpOnly: true,  // dont let browser javascript access cookie ever
-   secure: true,
-   cookie: { secure: true }
+   // secure: true,
+   // cookie: { secure: true }
 }));
+
+app.all('*', function (req, res, next) {
+  console.log(req.session);
+  console.log(req.sessionID);
+  next(); // pass control to the next handler
+});
 
 app.get('/', function(req, res) {
   res.render('starter');
